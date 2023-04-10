@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --violet:hsl(263, 55%, 52%);
+    --grayishBlue: hsl(217, 19%, 35%);
+    --blackishBlue:hsl(219, 29%, 14%);
+    --lightGray:hsl(0, 0%, 81%);
+    --lightGrayishBlue:hsl(210, 46%, 95%);
+}
+
+body{
+    background-color: var(--lightGrayishBlue);
+}
+
+.page{
+    padding: 1rem;
+    background-color: var(--lightGrayishBlue);
+    font-family: 'Barlow Semi Condensed',sans-serif;
+}
+
+.page .container:first-child{
+    background-color: var(--violet);
+}
+
+.page .container:nth-child(2){
+    background-color: var(--grayishBlue);
+}
+
+.page .container:nth-child(4){
+    background-color: var(--blackishBlue);
+}
+
+.page .container:nth-child(3), .page .container:nth-child(5){
+    background-color: #fff;
+}
+
+.page .container:nth-child(1) h1, .page .container:nth-child(2) h1, .page .container:nth-child(4) h1{
+    color:#fff;
+}
+
+
+.container__head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.p-white{
+    color: #fff;
+}
+
+.container-img{
+    background-color: aqua;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.container-img img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.container__title{
+    margin-bottom: 1rem;
+}
+
+.container__title h1{
+    font-size: 1.5rem;
+}
+
+.container{
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 15px;
+    box-shadow: 2px 0px 5px;
+}
+
+.container-name p:first-child{
+    text-transform:capitalize;
+}
+
+.container-name p:last-child{
+    text-transform:capitalize;
+    font-size: .9rem;
+}
+
+.container-name p:nth-child(2){
+    color: var(--lightGrayishBlue);
+}
+
+.page .container:nth-child(3) .container__head p:nth-child(2), .page .container:last-child .container__head p:nth-child(2){
+    color: var(--grayishBlue);
+}
+
+.container__paragraph{
+    font-size: 1rem;
+    color: var(--lightGrayishBlue);
+}
+
+
+.page .container:nth-child(3) .container__paragraph p{
+    color: var(--grayishBlue);
+}
+
+.page .container:last-child .container__paragraph p{
+    color: var(--grayishBlue);
+}
+
+
+
+@media screen and (min-width:500px){
+    .container__title h1{
+        font-size: calc(1rem + 1vh);
+    }
+
+    .container__paragraph{
+        font-size: calc(5px + 1vh);
+    }
+}
+
+
+@media screen and (min-width:800px){
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .page{
+        display: grid;
+        grid-template-areas: "daniel daniel daniel jonathan kira" "jeanette patrick patrick patrick kira";
+        gap: 1rem;
+    }
+
+    .container{
+        margin: 0;
+        
+    }
+
+    .page .container:first-child{
+      grid-area: daniel;
+
+    }
+
+    .page .container:nth-child(2){
+        grid-area: jonathan;
+    }
+
+    .page .container:nth-child(3){
+        grid-area: jeanette;
+    }
+
+    .page .container:nth-child(4){
+        grid-area: patrick;
+    }
+
+    .page .container:nth-child(5){
+        grid-area: kira;
+    }
+}
