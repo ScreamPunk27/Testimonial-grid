@@ -27,6 +27,9 @@ body{
 
 .page .container:first-child{
     background-color: var(--violet);
+    background-image: url('../img/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 90% top;
 }
 
 .page .container:nth-child(2){
