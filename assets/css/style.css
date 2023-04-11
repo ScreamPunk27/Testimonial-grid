@@ -122,12 +122,21 @@ body{
 
 
 @media screen and (min-width:500px){
+    
+    .container-name p:nth-child(1){
+        font-size: calc(.4rem + 1vh);
+    }
+
+    .container-name p:nth-child(2){
+        font-size: calc(.3rem + 1vh);
+    }
+
     .container__title h1{
-        font-size: calc(1rem + 1vh);
+        font-size: calc(.8rem + 1vh);
     }
 
     .container__paragraph{
-        font-size: calc(5px + 1vh);
+        font-size: calc(9px + 1vh);
     }
 }
 
@@ -149,7 +158,11 @@ body{
 
     .container{
         margin: 0;
-        
+        padding: 1rem 2rem;
+    }
+
+    .container__paragraph{
+        line-height: 1.2rem;
     }
 
     .page .container:first-child{
